@@ -593,29 +593,30 @@ header {
     header .header-form h2 {
       font-size: 1.2rem; }
     header .header-form form {
-      -webkit-box-orient: vertical;
+      margin-top: 1.8rem;
+      -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      margin-top: 1.8rem; }
-      header .header-form form .form-control {
-        -webkit-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
-                box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4); }
-      header .header-form form input[type="date"] {
-        text-transform: uppercase; }
-      header .header-form form ::-webkit-calendar-picker-indicator {
-        -webkit-filter: invert(1);
-                filter: invert(1); }
-      header .header-form form input:not([type="submit"])::-webkit-input-placeholder {
-        color: #fff; }
-      header .header-form form input:not([type="submit"]):-ms-input-placeholder {
-        color: #fff; }
-      header .header-form form input:not([type="submit"])::-ms-input-placeholder {
-        color: #fff; }
-      header .header-form form input:not([type="submit"])::placeholder {
-        color: #fff; }
-      header .header-form form .btn {
-        margin-top: 0.8rem; }
+          -ms-flex-direction: row;
+              flex-direction: row;
+      padding: 0 2rem; }
+    header .header-form .form-control {
+      -webkit-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+              box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4); }
+    header .header-form input[type="date"] {
+      text-transform: uppercase; }
+    header .header-form ::-webkit-calendar-picker-indicator {
+      -webkit-filter: invert(1);
+              filter: invert(1); }
+    header .header-form input:not([type="submit"])::-webkit-input-placeholder {
+      color: #fff; }
+    header .header-form input:not([type="submit"]):-ms-input-placeholder {
+      color: #fff; }
+    header .header-form input:not([type="submit"])::-ms-input-placeholder {
+      color: #fff; }
+    header .header-form input:not([type="submit"])::placeholder {
+      color: #fff; }
+    header .header-form .btn {
+      margin-top: 0.8rem; }
 
 .navbar-cng-bg {
   background-color: #fff;
@@ -631,3 +632,18 @@ header {
     color: var(--green) !important; }
 
 /*========== Header End ==========*/
+@media screen and (min-width: 768px) {
+  .header-title .text {
+    font-size: 1.4rem; } }
+
+@media screen and (min-width: 992px) {
+  .header-title h1 {
+    font-size: 4rem !important; }
+  .header-form form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; } }

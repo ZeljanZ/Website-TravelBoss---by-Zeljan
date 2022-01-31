@@ -161,9 +161,10 @@ header{
             font-size: 1.2rem;
         }
         form{
-            flex-direction: column;
             margin-top: 1.8rem;
-
+            flex-direction: row;
+            padding: 0 2rem;
+        }
             .form-control{
                 box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
             }
@@ -179,7 +180,7 @@ header{
             .btn{
                 margin-top: 0.8rem;
             }
-        }
+        
     }
 
 }

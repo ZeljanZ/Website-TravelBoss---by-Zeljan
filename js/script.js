@@ -20,15 +20,15 @@ navbarShowBtn.addEventListener('click', () => {
 navbarCloseBtn.addEventListener('click', () => {
     navbarCollapseDiv.classList.remove('navbar__collapse--remove');
 });
-
+// hide side bar when click on some link inside
 document.addEventListener('click', (e) => {
-    if(e.target.id != "navbar-collapse" && e.target.id != "navbar-show-btn" && e.target.parentElement.id != "navbar-show-btn"){
+    if(e.target.id != "navbar-collapse" && e.target.id != "navbar-show-btn"  && e.target.parentElement.id != "navbar-show-btn"){
         navbarCollapseDiv.classList.remove('navbar__collapse--remove');
     }
 });
 
-// stop transition and animatino during window resizing
-let resizeTimer;
+// stop transition and animation during window resizing
+let resizeTimer; 
 window.addEventListener('resize', () => {
     document.body.classList.add("resize-animation-stopper");
     clearTimeout(resizeTimer);

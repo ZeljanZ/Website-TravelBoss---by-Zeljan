@@ -79,6 +79,44 @@ button, input[type = "submit"]{
         transition: var(--trans);
     }
 }
+/* css stop transition and animation */
+.resize-animation-stopper *{
+    animation: none!important;
+    transition: none!important;
+}
+
+.py-4{
+    padding: 4rem 0;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.title-wrap{
+    text-align: center;
+    padding: 1.4rem 0;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.lg-title{
+    font-size: 1.8rem;
+}
+.sm-title{
+    display: block;
+    color: #787878;
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.7;
+}
+
+
+
+
 /*========== Utility End ==========*/ 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 

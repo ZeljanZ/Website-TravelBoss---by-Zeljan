@@ -160,9 +160,9 @@ header{
         h2{
             font-size: 1.2rem;
         }
-        form{
+        .form{
             margin-top: 1.8rem;
-            flex-direction: row;
+            flex-direction: column;
             padding: 0 2rem;
         }
             .form-control{
@@ -178,7 +178,7 @@ header{
                 color: #fff;
             }
             .btn{
-                margin-top: 0.8rem;
+                // margin-top: 0.8rem;
             }
         
     }

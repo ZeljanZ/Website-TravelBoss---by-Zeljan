@@ -88,6 +88,41 @@ button, input[type="submit"] {
     -webkit-transition: var(--trans);
     transition: var(--trans); }
 
+/* css stop transition and animation */
+.resize-animation-stopper * {
+  -webkit-animation: none !important;
+          animation: none !important;
+  -webkit-transition: none !important;
+  transition: none !important; }
+
+.py-4 {
+  padding: 4rem 0; }
+
+img {
+  width: 100%;
+  display: block; }
+
+.title-wrap {
+  text-align: center;
+  padding: 1.4rem 0;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase; }
+
+.lg-title {
+  font-size: 1.8rem; }
+
+.sm-title {
+  display: block;
+  color: #787878;
+  font-weight: 300;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  max-width: 450px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.7; }
+
 /*========== Utility End ==========*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -592,12 +627,12 @@ header {
     border-radius: 0.3rem; }
     header .header-form h2 {
       font-size: 1.2rem; }
-    header .header-form form {
+    header .header-form .form {
       margin-top: 1.8rem;
-      -webkit-box-orient: horizontal;
+      -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
+          -ms-flex-direction: column;
+              flex-direction: column;
       padding: 0 2rem; }
     header .header-form .form-control {
       -webkit-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
@@ -615,8 +650,6 @@ header {
       color: #fff; }
     header .header-form input:not([type="submit"])::placeholder {
       color: #fff; }
-    header .header-form .btn {
-      margin-top: 0.8rem; }
 
 .navbar-cng-bg {
   background-color: #fff;
@@ -632,18 +665,49 @@ header {
     color: var(--green) !important; }
 
 /*========== Header End ==========*/
+/*========== Featured Section==========*/
 @media screen and (min-width: 768px) {
   .header-title .text {
     font-size: 1.4rem; } }
 
 @media screen and (min-width: 992px) {
-  .header-title h1 {
+  .header-title .h1 {
     font-size: 4rem !important; }
-  .header-form form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .header-form .form {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
-            align-items: stretch; } }
+            align-items: stretch; }
+  .header-form .form-control, .header-form .header-form .btn {
+    margin: 0 0.5rem; }
+  /* navbar*/
+  #navbar-show-btn {
+    display: none; }
+  #navbar-collapse {
+    display: block !important;
+    background-color: transparent;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    height: auto;
+    padding: 0;
+    position: static;
+    width: 100%; }
+  #navbar-close-btn {
+    display: none; }
+  .navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-top: 0 !important; }
+  .nav-item {
+    margin: 0 !important;
+    margin-left: 2rem !important; }
+  /* change on scroll */
+  .navbar-cng-bg .navbar-nav .nav-link {
+    color: var(--dark) !important; } }

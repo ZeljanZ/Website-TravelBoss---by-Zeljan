@@ -231,10 +231,93 @@
         </section>
         <!-- end of services section -->
 
+        <!-- Testimonials section -->
+        <section id="testimonials" class="py-4">
+            <div class="container">
+                <div class="title-wrap">
+                    <span class="sm-title">what our clients say about us</span>
+                    <h2 class="lg-title">testimonials</h2>
+                </div>
+
+                <div class="test-row">
+                    <div class="test-item">
+                        <p class="text">Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Consectetur, neque enim, non perspiciatis 
+                            culpa quisquam numquam tempore quasi est eos labore. 
+                            Quaerat voluptatem eveniet praesentium quo ex reprehenderit 
+                            neque itaque.</p>
+                            <div class="test-item-info">
+                                <img src="images/test-1.jpg" alt="testimonial">
+                                <div>
+                                    <h3>Kevin Wilson</h3>
+                                    <p class="text">Trip to Brazil</p>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="test-item">
+                        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Voluptatibus aliquid, 
+                            quis consequatur eius voluptatum consectetur omnis amet in fugit rerum atque.
+                            Ab, illum aliquid?</p>
+                            <div class="test-item-info">
+                                <img src="images/test-2.jpg" alt="testimonial">
+                                <div>
+                                    <h3>Ben Davis</h3>
+                                    <p class="text">Trip to Maldives</p>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="test-item">
+                        <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                            Facere perspiciatis, illo eos laudantium quidem repudiandae exercitationem. 
+                            Perferendis aliquam quod ea quasi iste, 
+                            veritatis debitis ad. Tempora esse adipisci illum incidunt itaque voluptatum?</p>
+                            <div class="test-item-info">
+                                <img src="images/test-3.jpg" alt="testimonial">
+                                <div>
+                                    <h3>Jaura Jones</h3>
+                                    <p class="text">Trip to Thailand</p>
+                                </div>
+                            </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- end of testimonials section -->
+
+        <!-- video section -->
+        <div id="video">
+            <div class="video-wrapper flex">
+                <video loop >
+                    <source src="/videos/video-section.mp4" type="video/mp4">
+                </video>
+                <button type="button" id="play-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+        </div>
+        <!-- end of video section -->
+
         <!-- js -->
         <script src = "js/script.js"></script>
         <script>
-            
+            //play video
+            let btnIcon = document.querySelector('.fa-play');
+            let video = document.querySelector('.video-wrapper video');
+            document.getElementById('play-btn').addEventListener('click', () => {
+                if(video.paused){
+                    btnIcon.classList.remove('fa-play');
+                    btnIcon.classList.add('fa-pause');
+                    video.play();
+                }else{
+                    btnIcon.classList.remove('fa-pause');
+                    btnIcon.classList.add('fa-play')
+                    video.pause();
+                }
+            });
         </script>
     </body>
 </html>

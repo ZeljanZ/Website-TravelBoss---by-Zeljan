@@ -123,6 +123,13 @@ img {
   margin-left: auto;
   line-height: 1.7; }
 
+.my-2 {
+  margin: 2rem 0; }
+
+.shadow:hover {
+  -webkit-box-shadow: 0px 0px 18px -4px rgba(109, 109, 109, 0.64);
+          box-shadow: 0px 0px 18px -4px rgba(109, 109, 109, 0.64); }
+
 /*========== Utility End ==========*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -666,9 +673,89 @@ header {
 
 /*========== Header End ==========*/
 /*========== Featured Section==========*/
+.featured-item {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: var(--trans);
+  transition: var(--trans); }
+  .featured-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(18%, transparent), color-stop(99%, rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8)));
+    background: linear-gradient(to bottom, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%); }
+
+.featured-item:hover .featured-item-content {
+  -webkit-transform: translateY(0);
+          transform: translateY(0); }
+
+.featured-item-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  color: #fff;
+  width: 100%;
+  padding: 1rem;
+  -webkit-transform: translateY(62%);
+          transform: translateY(62%);
+  -webkit-transition: var(--trans);
+  transition: var(--trans); }
+  .featured-item-content span {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 1.2rem;
+    text-transform: capitalize; }
+  .featured-item-content .text {
+    color: #fff;
+    -webkit-transition: var(--trans);
+    transition: var(--trans); }
+
+/*========== Services ==========*/
+#services {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(/images/services-bg.jpg) center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/services-bg.jpg) center/cover no-repeat; }
+
+#services * {
+  color: #fff; }
+
+.services-item {
+  text-align: center;
+  padding: 2rem 0.5rem;
+  margin: 2rem 0; }
+
+.services-icon {
+  font-size: 3.2rem; }
+
+.services-item h3 {
+  margin: 1rem 0;
+  font-size: 1.6rem; }
+
+.services-item .btn {
+  margin-top: 1.6rem;
+  display: inline-block; }
+
+@media screen and (max-width: 460px) {
+  .featured-item-content {
+    -webkit-transform: translateY(68%);
+            transform: translateY(68%); } }
+
 @media screen and (min-width: 768px) {
   .header-title .text {
-    font-size: 1.4rem; } }
+    font-size: 1.4rem; }
+  .featured-row, .services-row {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; }
+  .featured-item, .services-item {
+    margin: 0; } }
 
 @media screen and (min-width: 992px) {
   .header-title .h1 {
@@ -711,3 +798,8 @@ header {
   /* change on scroll */
   .navbar-cng-bg .navbar-nav .nav-link {
     color: var(--dark) !important; } }
+
+@media screen and (min-width: 1400px) {
+  .featured-row, .services-row {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr); } }

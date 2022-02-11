@@ -1,2 +1,45 @@
 /*========== Featured Section==========*/ 
-//32min
+.featured-item{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    transition: var(--trans);
+    
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: linear-gradient(to bottom, transparent 0%,
+        transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+    }
+    
+}
+.featured-item:hover .featured-item-content{
+    transform: translateY(0);
+}
+.featured-item-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    color: #fff;
+    width: 100%;
+    padding: 1rem;
+    transform: translateY(62%);
+    transition: var(--trans);
+
+    span{
+        font-size: 1.2rem;
+        display: block;
+        margin-bottom: 1.2rem;
+        text-transform: capitalize;
+    }
+    .text{
+        color: #fff;
+        transition: var(--trans);
+    }
+}

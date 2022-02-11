@@ -1,0 +1,26 @@
+/*========== Services ==========*/ 
+#services{
+    background: 
+                linear-gradient(rgba(0, 0, 0, 0.5),
+                                rgba(0, 0, 0, 0.5)),
+                url(/images/services-bg.jpg) center/cover no-repeat;
+}
+#services *{
+    color: #fff;
+}
+.services-item{
+    text-align: center;
+    padding: 2rem 0.5rem;
+    margin: 2rem 0;
+}
+.services-icon{
+    font-size: 3.2rem;
+}
+.services-item h3{
+    margin: 1rem 0;
+    font-size: 1.6rem;
+}
+.services-item .btn{
+    margin-top: 1.6rem;
+    display: inline-block;
+}
